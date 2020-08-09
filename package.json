@@ -1,0 +1,39 @@
+{
+    "name": "react-jetpack",
+    "version": "1.0.0-alpha.1",
+    "description": "An opinionated toolkit for efficient React.js development",
+    "main": "./",
+    "source": "src/",
+    "author": "thinkholic",
+    "license": "MIT",
+    "scripts": {
+        "setup": "npm install && cd testbed/ && npm install",
+        "build": "npm run build:webpack && npm run copy:assets && npm run symlink",
+        "build:webpack": "webpack",
+        "copy:assets": "cp package.json README.md dist/",
+        "symlink": "cd dist/ && npm link && cd .. && cd testbed/ && npm link react-jetpack",
+        "start": "concurrently \"npm run build:webpack:watch\" \"cd testbed/ && npm start\"",
+        "build:webpack:watch": "webpack --watch"
+    },
+    "peerDependencies": {
+        "react": "^16.0.0",
+        "react-dom": "^16.0.0"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.21.0",
+        "babel-loader": "^7.1.4",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-plugin-transform-react-jsx": "^6.24.1",
+        "babel-preset-env": "^1.6.1",
+        "concurrently": "^5.3.0",
+        "path": "^0.12.7",
+        "react": "^16.0.0",
+        "react-dom": "^16.0.0",
+        "webpack": "^4.5.0",
+        "webpack-cli": "^3.2.1"
+    },
+    "files": [
+        "dist"
+    ]
+}
