@@ -6,7 +6,9 @@ module.exports = {
     entry: {
         index: './index.js',
         utils: './utils/index.js',
-        createContext: './utils/createContext.js'
+        createContext: './utils/createContext.js',
+        components: './components/index.js',
+        Button: './components/Button/index.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
