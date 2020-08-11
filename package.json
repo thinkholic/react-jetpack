@@ -1,6 +1,6 @@
 {
   "name": "react-jetpack",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "An opinionated, but loosely coupled toolkit for efficient React.js development",
   "main": "./",
   "source": "src/",
