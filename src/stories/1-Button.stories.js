@@ -1,12 +1,12 @@
-import React from "react";
-import { action } from "@storybook/addon-actions";
-import Button from "../components/Button";
+import React from 'react';
+import { action } from '@storybook/addon-actions';
+import Button from '../components/Button';
 
 export default {
-  title: "Button",
+  title: 'Button',
   component: Button,
 };
 
 export const Default = () => (
-  <Button onClick={action("clicked")}>Hello Button</Button>
+  <Button onClick={action('clicked')}>Hello Button</Button>
 );
