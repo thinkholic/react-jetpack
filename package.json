@@ -1,7 +1,7 @@
 {
   "name": "react-jetpack",
   "version": "1.0.0-alpha.1",
-  "description": "An opinionated toolkit for efficient React.js development",
+  "description": "An opinionated, but loosely coupled toolkit for efficient React.js development",
   "main": "./",
   "source": "src/",
   "author": "thinkholic",
@@ -37,6 +37,7 @@
     "eslint": "^7.6.0",
     "eslint-plugin-react": "^7.20.5",
     "path": "^0.12.7",
+    "prettier": "2.0.5",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "webpack": "^4.5.0",
@@ -44,5 +45,13 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": ["eslint --fix", "prettier --write"]
+  }
 }
