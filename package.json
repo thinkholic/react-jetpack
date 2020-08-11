@@ -15,7 +15,8 @@
     "start": "concurrently \"npm run build:webpack:watch\" \"cd testbed/ && npm start\"",
     "build:webpack:watch": "webpack --watch",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "jest"
   },
   "peerDependencies": {
     "react": "^16.0.0",
@@ -36,6 +37,7 @@
     "concurrently": "^5.3.0",
     "eslint": "^7.6.0",
     "eslint-plugin-react": "^7.20.5",
+    "jest": "^26.3.0",
     "path": "^0.12.7",
     "prettier": "2.0.5",
     "react": "^16.0.0",
